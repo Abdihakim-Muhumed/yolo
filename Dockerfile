@@ -5,3 +5,4 @@ WORKDIR /usr/src/app
 
 COPY . .
 
+ENTRYPOINT [ "echo" "Image built" ]
