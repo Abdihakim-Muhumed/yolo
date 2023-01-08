@@ -4,5 +4,3 @@ LABEL maintainer="Abdihakim Muhumed <abdihakim.muhumedo@gmail.com>"
 WORKDIR /usr/src/app
 
 COPY . .
-
-ENTRYPOINT [ "echo" "Image built" ]
