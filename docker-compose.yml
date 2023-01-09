@@ -6,3 +6,12 @@ services:
     container_name: db_container
     image: mongo:latest
     restart: always
+    
+  #client microservice
+  client:
+    container_name: client_container
+    build: .
+    command: npm start
+    ports:
+      - 3000:3000
+    stdin_open: true
