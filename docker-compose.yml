@@ -11,6 +11,7 @@ services:
   client:
     container_name: client_container
     build: .
+    working_dir: /usr/src/app/client
     command: npm start
     ports:
       - 3000:3000
