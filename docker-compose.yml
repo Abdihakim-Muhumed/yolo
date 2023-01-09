@@ -14,6 +14,7 @@ services:
   client:
     container_name: client_container
     build: .
+    image: abdihakim3541/yolo:1.0.1
     working_dir: /usr/src/app/client
     command: npm start
     ports:
@@ -24,6 +25,7 @@ services:
   backend:
     container_name: backend_container
     build: .
+    image: abdihakim3541/yolo:1.0.2
     working_dir: /usr/src/app/backend
     command: npm start
     ports:
