@@ -16,3 +16,14 @@ services:
     ports:
       - 3000:3000
     stdin_open: true
+
+  #Backend microservice
+  backend:
+    container_name: backend_container
+    build: .
+    working_dir: /usr/src/app/backend
+    command: npm start
+    ports:
+      - 5000:5000
+    environment:
+      - MONGODB_URI=mongodb://mongo_db/27017

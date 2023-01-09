@@ -12,3 +12,10 @@ COPY ./client .
 RUN npm install
 
 WORKDIR /usr/src/app/backend
+
+COPY ./backend/package*.json ./
+
+
+COPY ./backend .
+
+RUN npm install
