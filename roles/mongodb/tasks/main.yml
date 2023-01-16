@@ -7,3 +7,4 @@
     restart: yes
     volumes:
       - mongo_db:/data/db
+    

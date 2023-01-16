@@ -11,8 +11,9 @@
       state: present
   roles:
    - mongodb
-   - client
    - backend
+   - client
+ 
 
   tasks:
     - name: Docker Volumes

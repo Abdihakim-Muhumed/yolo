@@ -7,6 +7,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # General Vagrant VM configuration.
   config.vm.box = "geerlingguy/ubuntu2004"
   config.vm.provision :docker  # Install Docker
+  config.vm.network "forwarded_port", guest: 3000, host: 3000, auto_correct: true # Forwading guest port to host 
   config.ssh.insert_key = false
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.provider :virtualbox do |v|

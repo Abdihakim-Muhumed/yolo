@@ -7,5 +7,7 @@
     ports:
       - 5000:5000
     env:
-      MONGODB_URI:mongodb: "//mongo_db/27017"
+      MONGODB_URI:  "mongodb://mongo_db/27017"
+    state: started
+    restart: yes
     
