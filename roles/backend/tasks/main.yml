@@ -1,0 +1,9 @@
+- name: Backend Microservice
+  docker_container:
+    name: backend_container
+    image: abdihakim3541/yolo:1.0.1
+    working_dir: /usr/src/app/client
+    command: npm start
+    ports:
+      - 3000:3000
+    stdin_open: true
