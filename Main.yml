@@ -12,4 +12,8 @@
    - client
    - backend
 
+  tasks:
+    - name: Docker Volumes
+      docker_volume:
+        mongo_db: {}
 

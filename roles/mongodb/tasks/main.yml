@@ -5,3 +5,5 @@
     image: mongo:latest
     state: started
     restart: yes
+    volumes:
+      - mongo_db:/data/db
