@@ -14,21 +14,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.linked_clone = true
   end
 
-  # Application server 1.
+  # Server configuration.
   config.vm.define "app1" do |app|
-    app.vm.hostname = "client.dev"
+    app.vm.hostname = "yolo-server.dev"
     app.vm.network :private_network, ip: "192.168.60.4"
-  end
-
-  # Application server 2.
-  config.vm.define "app2" do |app|
-    app.vm.hostname = "backend.dev"
-    app.vm.network :private_network, ip: "192.168.60.5"
-  end
-
-  # Database server.
-  config.vm.define "database" do |db|
-     db.vm.hostname = "mongodb.dev"
-    db.vm.network :private_network, ip: "192.168.60.6"
   end
 end
