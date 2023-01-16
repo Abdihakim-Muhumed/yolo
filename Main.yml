@@ -1,14 +1,9 @@
 ---
 - hosts: all
 
-  tasks:
-   - name: Copy Directory
-     copy: src=./ dest=/tmp/path/
-     
-   - name: Ensure Docker image is built from  Dockerfile.
+  tasks: 
+   - name: Ensure Docker image is pulled from dockerhub.
      docker_image:
-       name: apps
-       source: build
-       build:
-         path: /tmp/path/
-       state: present
+      name: abdihakim3541/yolo:1.0.2
+      source: pull
+      state: present
