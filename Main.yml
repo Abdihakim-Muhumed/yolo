@@ -2,10 +2,12 @@
 - hosts: all
 
   tasks:
+   - name: Copy Dockerfile
+     copy: src=Dockerfile dest=/tmp/path/
    - name: Ensure Docker image is built from  Dockerfile.
      docker_image:
        name: apps
        source: build
        build:
-         path: Docker
+         path: /tmp/path/
        state: present
