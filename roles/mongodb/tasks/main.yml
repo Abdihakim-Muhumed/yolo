@@ -1,0 +1,7 @@
+---
+- name: Mongodb Microservice
+  docker_container:
+    name: mongodb
+    image: mongo:latest
+    state: started
+    restart: yes
