@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  tasks:
+   - name: Ensure Docker image is built from  Dockerfile.
+     docker_image:
+       name: apps
+       source: build
+       build:
+         path: Docker
+       state: present
