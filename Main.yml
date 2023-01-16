@@ -1,9 +1,15 @@
 ---
 - hosts: all
 
-  tasks: 
+  pre_tasks: 
    - name: Ensure Docker image is pulled from dockerhub.
      docker_image:
       name: abdihakim3541/yolo:1.0.2
       source: pull
       state: present
+  roles:
+   - mongodb
+   - client
+   - backend
+
+
