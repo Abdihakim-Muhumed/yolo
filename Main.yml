@@ -1,5 +1,7 @@
 ---
 - hosts: all
+  vars:
+    docker_volume: mongo_db
 
   pre_tasks: 
    - name: Ensure Docker image is pulled from dockerhub.
@@ -15,5 +17,5 @@
   tasks:
     - name: Docker Volumes
       docker_volume:
-        mongo_db: {}
+        name: "{{ docker_volume }}"
 
