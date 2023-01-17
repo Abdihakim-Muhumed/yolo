@@ -18,7 +18,7 @@ vagrant up && vagrant provision
 
 vagrant ssh app1 
 
-#### Install docker into the virtual machine and then go ahead and login into docker hub with.
+#### Install docker into the virtual machine and then go ahead and login into docker hub within it.
 sudo apt install docker 
 
 docker login
@@ -30,10 +30,14 @@ logout
 
 ansible-playbook -i hosts Main.yml
 
+### 4. View live application
+
+[localhost:3000](http://localhost:3000/)
 
 
+# Running on localhost (if you don't want to configure a virtual machine)
 
-# Requirements
+## Requirements
 Make sure that you have the following installed:
 - [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
 - npm 
